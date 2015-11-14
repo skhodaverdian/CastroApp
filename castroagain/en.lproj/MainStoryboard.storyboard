@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Gud-O1-ATr">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="pa7-CZ-Kl3">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Gud-O1-ATr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" id="jjt-q1-UDT">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PPR-Bb-EM0" kind="relationship" relationship="rootViewController" id="DOb-gz-kRt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2bc-Ud-EYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2814" y="13"/>
+        </scene>
+        <!--Fidel Castro-->
+        <scene sceneID="0oK-sB-Ex8">
+            <objects>
+                <tableViewController storyboardIdentifier="CellIdentifier" id="PPR-Bb-EM0" customClass="OpeningScreenViewController" sceneMemberID="viewController">
+                    <tableView key="view" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LTV-sf-iU2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="4JA-sU-DwJ">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4JA-sU-DwJ" id="OJL-5k-XwU">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="PPR-Bb-EM0" id="MP1-rG-qjy"/>
+                            <outlet property="delegate" destination="PPR-Bb-EM0" id="1WW-dt-6W1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Fidel Castro" id="bjz-du-x7j">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="ILG-Ol-0Jz"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="navbarHome" destination="bjz-du-x7j" id="Fux-Ie-Sd4"/>
+                        <segue destination="nd9-jD-ojC" kind="push" identifier="displayBiography" id="w4k-Hi-Soz"/>
+                        <segue destination="bSc-p3-WRc" kind="push" identifier="displaySpeeches" id="ef6-OP-yJQ"/>
+                        <segue destination="AXP-xA-OaO" kind="push" identifier="displayGoogleImages" id="Ml2-FO-Ymo"/>
+                        <segue destination="v1e-k6-R98" kind="push" identifier="displayVideos" id="Dhq-gO-9ta"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdu-g1-kLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2211" y="19"/>
+        </scene>
+        <!--Pictures-->
+        <scene sceneID="WCo-4v-ViG">
+            <objects>
+                <viewController id="WSQ-Mi-BSI" customClass="PictureGalleryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleAspectFit" id="3S2-dU-ZeV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" contentMode="scaleAspectFit" directionalLockEnabled="YES" pagingEnabled="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="htk-K6-Yzh">
+                                <rect key="frame" x="0.0" y="65" width="320" height="415"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="OZy-9T-LDk">
+                                    <size key="itemSize" width="320" height="269"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="50" height="50"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell userInteractionEnabled="NO" contentMode="scaleAspectFill" reuseIdentifier="Cell" id="Jnf-6g-GwI" customClass="CustomCell">
+                                        <rect key="frame" x="0.0" y="73" width="314" height="269"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="314" height="269"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="11x-BK-Du7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="314" height="235"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="xQH-ma-WJc">
+                                                    <rect key="frame" x="2" y="232" width="312" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999964" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="citation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AUn-vO-tYc">
+                                                    <rect key="frame" x="5" y="255" width="179" height="13"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="7"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                        <size key="customSize" width="314" height="269"/>
+                                        <connections>
+                                            <outlet property="citeLbl" destination="AUn-vO-tYc" id="Ea8-82-4TU"/>
+                                            <outlet property="myImage" destination="11x-BK-Du7" id="Zmr-Ih-4zj"/>
+                                            <outlet property="picsLbl" destination="xQH-ma-WJc" id="su6-M4-w4g"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tMN-Fa-GDz">
+                                    <rect key="frame" x="314" y="0.0" width="50" height="415"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pictures" id="dNy-dQ-SnG"/>
+                    <connections>
+                        <outlet property="myCollectionView" destination="htk-K6-Yzh" id="69W-NG-Te1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AP8-Xe-klI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-360" y="185"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="dnL-KE-muQ">
+            <objects>
+                <viewController id="6XY-Gn-tcn" customClass="VideoViewController" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="V09-Wa-kNW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ift-oS-eKK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3l3-4W-PAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="185"/>
+        </scene>
+        <!--Famous Speeches-->
+        <scene sceneID="0uC-Tx-1fK">
+            <objects>
+                <tableViewController id="bSc-p3-WRc" customClass="SpeechesViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DAI-4N-1Sp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="aWY-ee-wXD">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aWY-ee-wXD" id="SYr-nj-J97">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bSc-p3-WRc" id="jj8-WJ-e4b"/>
+                            <outlet property="delegate" destination="bSc-p3-WRc" id="iEC-hc-21b"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Famous Speeches" id="vU2-LY-1IA">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="5jh-QS-2QV"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="vtA-YU-lYV" kind="push" identifier="revolutionSpeech" id="d1v-mQ-YY7"/>
+                        <segue destination="kkC-GK-gbK" kind="push" identifier="USAgressionSpeech" id="pR1-dA-q2e"/>
+                        <segue destination="vJp-Bz-2kZ" kind="push" identifier="historySpeech" id="SBy-xi-BSU"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xO7-No-y6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2823" y="1101"/>
+        </scene>
+        <!--Videos-->
+        <scene sceneID="j6n-19-NA0">
+            <objects>
+                <tableViewController id="v1e-k6-R98" userLabel="Videos" customClass="YouTubeVidoesViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="u6y-lY-5lc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="mLh-L2-3UR">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mLh-L2-3UR" id="BPL-H2-nuS">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Videos" id="n4T-7z-AWt">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="UR9-cQ-Z3t"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="gfw-M8-hyh" kind="push" identifier="playYouTube1" id="1Na-gv-QZ4"/>
+                        <segue destination="jIo-ER-LJy" kind="push" identifier="playMurrowVideo" id="OzH-Hw-J5l"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kff-ks-aOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1393" y="132"/>
+        </scene>
+        <!--Pictures Table View-->
+        <scene sceneID="7e7-dc-Fpw">
+            <objects>
+                <tableViewController title="Pictures Table View" id="AXP-xA-OaO" customClass="PicturesViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xcp-cN-tNb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="mLt-Vt-JpI">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mLt-Vt-JpI" id="494-Kf-W0N">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Picture Gallery" id="7al-lL-YDw"/>
+                    <connections>
+                        <segue destination="eHC-0H-SHn" kind="push" identifier="displayGoogleImagePortrait" id="gfV-iK-CrQ"/>
+                        <segue destination="SzE-eE-CsE" kind="push" identifier="displayGoogleImageFamily" id="fGi-7l-7ug"/>
+                        <segue destination="lYR-oY-fHy" kind="push" identifier="displayGoogleImageRevolution" id="CcT-C8-y9q"/>
+                        <segue destination="Yo5-n1-a6E" kind="push" identifier="displayGoogleImageMissle" id="cbL-Tt-QLR"/>
+                        <segue destination="5M0-rr-gcb" kind="push" identifier="displayGoogleImageRecent" id="cir-hp-BhS"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BCi-9g-4fi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1446" y="1135"/>
+        </scene>
+        <!--Cuba is a socialist nation-->
+        <scene sceneID="bBx-aD-N00">
+            <objects>
+                <viewController id="kkC-GK-gbK" customClass="WebSpeech2ViewController" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" id="DA6-33-FRu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                    </webView>
+                    <navigationItem key="navigationItem" title="Cuba is a socialist nation" id="TmV-de-7xC">
+                        <barButtonItem key="backBarButtonItem" title="Speeches" id="scr-K2-7IO"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myWebView2" destination="DA6-33-FRu" id="qZl-MS-UyP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZu-yH-eed" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2931" y="1963"/>
+        </scene>
+        <!--The revolution begins now-->
+        <scene sceneID="mcd-v6-gnw">
+            <objects>
+                <viewController id="vtA-YU-lYV" customClass="WebSpeech1ViewController" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" id="gDj-fz-PKJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                    </webView>
+                    <navigationItem key="navigationItem" title="The revolution begins now" id="flq-kx-dw7">
+                        <barButtonItem key="backBarButtonItem" title="Speeches" id="Ew2-7J-uYr"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myWebView" destination="gDj-fz-PKJ" id="8cn-58-j0w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wzR-T2-Vx3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2575" y="1963"/>
+        </scene>
+        <!--Biography-->
+        <scene sceneID="TfN-Mq-42A">
+            <objects>
+                <viewController id="nd9-jD-ojC" customClass="BiographyViewController" sceneMemberID="viewController">
+                    <view key="view" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="EpH-fo-3ct">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" pagingEnabled="YES" indicatorStyle="black" keyboardDismissMode="onDrag" editable="NO" usesAttributedText="YES" selectable="NO" id="qzo-9V-alO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="9389"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" staticText="YES"/>
+                                </accessibility>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Biography of Fidel Castro:
+
+Early Years
+
+Fidel Castro Ruz was born on August 13, 1926 on his family prosperous sugar plantation near Birán in the eastern province of Oriente (today the Holguín Province). He was one of seven children of Ángel Castro, a wealthy Spanish-born landowner and his second wife Lina Ruz González. Ángel came from Galicia, Spain as an immigrant laborer but eventually became a landowner. He took up with Lina Ruz, the household maid from a poor family, when his first marriage to María Louisa Argota, who was from a wealthy family with ties to the Batista clan, was on the rocks. They had three children, including Fidel, before they got married in the Catholic Church. 
+
+He first attended the French Marists brothers’ La Salle boarding school in Santiago, and then the prestigious Jesuit-run Colegio Dolores for boys’ school. In 1941 he enrolled in the exclusive high school Colegio Belén in Havana. From the beginning he was spotted by the teachers as a talented boy with exceptional leadership abilities. Father Armando Llorente recalled him as “motivated, proud, and different from others… Fidel excelled in sports and was not interested in parties or socializing…” In high school he became familiar with writings of José Marti y Pérez, the legendary Cuban revolutionary leader of the late 1800s. He graduated with distinction in 1945.
+
+Political Activism
+
+Fidel enrolled in University of Havana to study law. From the beginning he got involved in rather violent student protest movement ruled by the culture of gangsterismo. He started reading a great deal of Marxist literature during these years and associated with Insurrectional Revolutionary Union (UIR) political organization that had long-standing ties to Cuban communist groups.
+
+In 1947 Castro joined an expedition led by writer Juan Bosch to overthrow the government of Dominican Republic led by dictator Rafael Trujillo, but the expedition never materialized.
+
+The following year he participated in one of the most controversial episodes of his life, the Bogotazo – a series of riots in Bogotá, Colombia, following the assassination of Liberal party leader Jorge E. Gaitán. He was caught in the violent riots that rocked Colombia after the assassination. He joined the mobs roaming the streets, distributing anti-U.S. propaganda and inciting the populace to revolt. Pursued by Colombian authorities, Cuban students sought asylum in the Cuban embassy and were later flown back to Havana. Castro resumed his law studies at the University of Havana.
+
+While still a student, Castro married Mirta Díaz-Balart, a philosophy student whose wealthy family had political ties to powerful Cuban military leader Fulgencio Batista. They had one son together but the marriage later dissolved. 
+
+While in college, Castro was exposed to different ideologies and it was nationalism, not socialism, which became the driving force of his early political activism. Castro’s hero was José Martí, not Lenin or Marx. As a student, Castro could have joined the Cuban Communist Party (as his brother Raúl had done), but he favored the nationalist ideas of Eduardo Chibas and the Ortodoxo party advocating economic independence, political liberty, social justice and an end to corruption for the country. Since Cuba was subject to the imperialism of both Spain and the United States, Castro believed in establishing a nation free of the colonialism and neocolonialism of the past years.
+
+Run for Congress
+
+Castro opened a private law office after graduating college in 1950. As a candidate from the Ortodoxo party, he was nominated for congress for the June 1952 elections. But the elections never materialized.  On March 10, 1952, General Fulgencio Batista, who had been a dominant figure in Cuban politics since the 1930s, seized power in a bloodless military coup.
+
+Castro reacted to the coup by submitting a petition to the Court of Constitutional Guarantees, in which he accused the dictator of having violated the Constitution of 1940. When his petition was rejected, he became convinced that violence seemed to be the only way of opposing the military coup.
+
+Attack on the Moncada Barracks 
+
+Hoping to arouse civil unrest, Castro personally planned and organized a group of 165 followers in an armed attack on Moncada military barracks in Santiago on July 26, 1953. The plan was not successful, the assault was repelled by government troops, with Castro’s rebel forces suffering heavy loses. Castro fled into the mountains but was captured days later. 
+
+On trial, Castro delivered one of his most famous speeches, “History Will Absolve Me”, in which he listed, with unique flair, the corruption and shortcomings of the Batista’s regime as well as his own solutions to the problem besetting Cuba. His speech embraced liberal nationalism, not socialism, and called for a democratic government, better education and health care, economic diversification, and an end to the overbearing influence of the United States in Cuba’s politics and economy. Not only were nationalists and socialists drawn into Castro’s camp but also members of the Cuban middle class resentful of Batista’s alliance with U.S. businesses and uneven development of Cuban economy.
+
+Sentenced to 15 years of incarceration to be served on the Isle of Pines prison, Castro was released two years later as part of a general amnesty. Along with his brother Raúl, Castro was exiled to for Mexico City in 1955.
+
+Return to Cuba
+
+In Mexico, Castro organized the 26th of July Movement, receiving military training from the Mexican government and financial support from president in exile Carlos Prio Socarras. Mexico City was also were he met Ernesto “Che” Guevara de la Serna, a young Argentine doctor and Marxist revolutionary who had recently arrived from Guatemala, having experienced, first-hand, the U.S. backed coup in there in 1954.
+
+On November 25, 1956, along with 82 revolutionaries, which included his brother Raúl and Che Guevara, Fidel boarded a worn-out, overcrowded leisure yacht named Granma.  The original route was designed to re-enact the path of José Martí at the beginning of Cuba’s War of Independence of 1895 but the vessel was spotted by a helicopter and the rebels were forced to land, on December 2, 1956, at Playa de los Colorados, 15 miles south of pre-arranged landing spot.
+
+On their way towards the Sierra Maestra Mountain, the revolutionaries were betrayed by their guide and ambushed by Batista’s troops.  Most were killed and only 12 made it to the mountain jungles. At this point Castro declared, “We will win this war, we’re just beginning to fight”.
+
+The Ouster of Batista
+
+For the next two years, utilizing Maoist-influenced foco military strategy, Castro’s troops, that eventually grew to be 1000, fought Batista’s regime in rural areas by running hit-and-run guerilla operations against isolated military outpost. In the meantime, in the cities, the growing dissatisfactions with the government gave rise to urban unrest including an unsuccessful student-led attack on the presidential palace during which Batista was almost killed. Beginning in early 1958, the rebel movement gained a series of victories against Batista’s forces with Castro emerging as the undisputed opposition leader. This in turn resulted in increased brutal tactics employed by the government troops.
+
+Same year, the Eisenhower administration stops military shipments to Cuba, accusing it of using the military aid to repress internal opposition. With growing dissatisfaction among the middle-class in the cities, and the ever-increasing defections from the military, Batista finally accepted his defeat and fled the country to the Dominican Republic in December 1958. Next day, Castor and his “26th of July” movement marched into Havana. 
+
+
+
+
+Assumption of Power
+
+At the beginning a provincial government was composed of a coalition of forces who had opposed Batista, but Castro’s “26th of July” movement was the leading group within the coalition. 
+
+In the beginning days of the new provincial government there were many arrests and executions of former members of the Batista’s regime. Elections were to be held within 18 months. On February 15, Fidel Castro became the prime minister with his brother, Raúl, assuming the command of the armed forces. 
+
+A powerful and charismatic leader, Castro started exerting an almost mystical hold over Cubans. He lectured the people on morality, public virtue and emphasized his commitment to democracy, social reform with the promise for a nationalistic government that would respect private property. He started gaining international attention too with his defiant stand against the United States. 
+
+The provincial government started a series of reforms. It passed an agrarian reform law, substantially reduced residential rents and confiscated inherited property. It also nationalized industrial enterprises, specially sugar, most of them owned by U.S. companies. These policies were not popular with the middle-class Cubans many of which left and went into exile. 
+
+Break with the United States
+
+Castro suspected United States of harboring aggressive designs of derailing the revolution. In February 1960, the deputy premier of the Soviet Union, Anastas Mikoyan, visited Cuba and signed diplomatic and trade agreements with Castro. Cuba agreed to buy Soviet oil in exchange for sugar. In June, Cuba confiscated American oil refineries since, under pressure from the Eisenhower administration, the refiners refused to process oil from the Soviet Union.  The U.S. responded by cutting the import quota of Cuban sugar. Castro in turn nationalized all American owned sugar mills and expropriated all American investments in the country.
+
+In a trip to the United States in 1959, organized by American Society of Newspaper Editors, Castro was snubbed by Dwight Eisenhower for a meeting. Instead he met with Vice President Richard Nixon in what turned out to be a cold and tense meeting.  In September 1960 Castro visited the United States again this time for the opening session of the United Nations General Assembly in New York. There he met and embraced Nikita Khrushchev. A month later, the United States imposed an economic embargo on Cuba and in January of 1961, the Eisenhower administration broke relations with Cuba.
+
+
+
+
+The Bay of Pigs Fiasco
+
+Encouraged by the coup in Guatemala orchestrated by the CIA, the Eisenhower administration, in 1961, gave the final approval for a secret plan to topple the Castro regime by an invasion of the island by anti-Castro exiles in the United States. The administration left office before it could carry out the plan, and the task fell on the incoming administration of John F. Kennedy. 
+
+The operation was both ill conceived and poorly planned and was a total failure for the United States. It helped Castro consolidate his power in the country.  He was hailed as one of the few leaders capable of standing up to the giant northern bully. On December 2, 1961, Castro finally declared himself a Marxist and fully switched to the Soviet camp given that he had few alternatives. 
+
+The Cuban Missile Crisis
+
+In October 1962, U.S. intelligence detected Soviet nuclear missiles in Cuba. President Kennedy demanded that the Soviets remove the missiles and Soviet premier Khrushchev countered by demanding the removal of U.S. missiles from Turkey. For days it appeared that the United States and the Soviet Union were header toward war.  While the world anxiously waited, Premier Khrushchev gave an eleventh-hour order to turn back a Soviet ship allegedly carrying nuclear missiles and the recall the Soviet nuclear missiles from Cuba. In turn the U.S. agreed not to invade Cuba and dismantled its missiles in Turkey and Italy that were aimed at the Soviet Union.
+
+According to documents released years later, Castro was willing to call Washington’s bluff. Later, he was privately furious and felt humiliated at Khrushchev’s decision to come to terms with the Americans and for not being included in U.S.–Soviet negotiations.
+
+Fate Sealed
+
+The missile crisis sealed Cuba’s fate: the United States would work to undermine Cuba at every turn, as well as try to assassinate Castro himself.  From the early 1960s to the early 2000s, Castro led the country, with varied success, on the path of Soviet-style socialism. He merged all groups that had fought against Batista into the Integrated Revolutionary Organization, later changed to United Party of the Socialist Revolution and finally transformed into the Communist Party of Cuba.
+
+All economic enterprises were nationalized, no matter how small, in an effort to centralize the economy and the distribution of resources. Fearful of another U.S.-backed coup, all political activities, the press and education were closely monitored. Confiscation of private property brought virtually all industrial and businesses under government control. 
+
+Castro remained the sole source of power, and decision-making became highly centralized and hierarchical. He ruled with a small circle of trusted advisers (members of the July 26 Movement and the military) in a government with no formal administrative or political structure during the period of 1959 to 1970. 
+
+Domestic Policy
+
+Castro concentrated on putting an end to human, social and economic underdevelopment for Cuba. He wanted to spare Cuba from extreme poverty that existed in other Latin American countries. He eradicated illiteracy, built clinics and hospitals throughout the country that resulted in higher life expectancy and lower infant mortality rate, in some cases better than many developed countries. Through rural reforms, peasants were given land while urban reforms reduced rents and banned the ownership of more than one dwelling. He helped train many doctors and teachers believing them to be as important as soldiers. 
+
+The state was a tightly controlled, one-party system, with power bureaucracy ran by Castor’s comrades with him as the supreme leader.  Only communist and government media, like the newspaper Granma, were permitted and all opposition was repressed. 
+
+Under Castro, the regime has made great strides towards higher standard of living for the population. It has been able to make great strides in living condition, education, life expectancy, housing and health services.  Economic prosperity, however has evaded the country. Economy has suffered from centralized planning and poor management and during Soviet times, from too much reliance on subsidies and aid from the Soviets. 
+
+The fall of the Soviet Union caused extreme hardship for Cuba. Faced with shortage of fuel and basic material Castro was forced to soften some of his socialistic stands and move more towards a market-oriented economy. Subsidies to inefficient state enterprises were reduced. Initiatives were put in place to increase tourism. Banking laws were changed to allow foreign investment. Having been deprived of sugar contracts with the Soviet Union and being forced to sell its sugar on world’s market, Cuba was forced to close half of its the state-owned sugar mills eliminating a great deal of jobs.
+
+Foreign Policy
+
+Cuba’s global foreign policy, evolved during the 1960’s and called “proletarian internationalism”, centered on the idea that the survival of the revolution and socialism in Cuba was only possible by exporting Cuba’s revolutionary model to other Latin America and Third World countries. Partly to divert the attention and hostility of the United States away from Cuba and also to help create favorable conditions abroad, Castro’s regime increased its support of many guerrilla movements in Latin America.  But this policy ran counter to interests of both the U.S. and the Soviet Union. Eventually these efforts fizzled out.
+
+For the next three decade Cuba aided many third world nations in Africa, the Middle East, the Caribbean, and Latin America, militarily, technically and in education. Some of the countries helped were Algeria, Angola, Ethiopia, Nicaragua, El Salvador and Guatemala. 
+
+Retirement
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">While recovering from a acute intestine surgery all of Fidel’s duties were transferred to his brother Raúl on July 31, 2006. This move was initially thought to be temporary. But Fidel was never able to recover fully and finally in February of 2008 he resigned from all remaining positions of responsibility. 
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="1" paragraphSpacingBefore="1" headerLevel="1"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                    </view>
+                    <navigationItem key="navigationItem" title="Biography" id="r1t-f5-iRt">
+                        <barButtonItem key="backBarButtonItem" enabled="NO" title="Home" style="done" id="oPd-qW-4LL"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmb-Kk-UDw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1344" y="-652"/>
+        </scene>
+        <!--History will absolve me-->
+        <scene sceneID="sXw-0J-lma">
+            <objects>
+                <viewController id="vJp-Bz-2kZ" customClass="WebSpeech0ViewController" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" id="TGW-5A-4kq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                    </webView>
+                    <navigationItem key="navigationItem" title="History will absolve me" id="khm-1k-gly">
+                        <barButtonItem key="backBarButtonItem" title="Speeches" id="pKH-KO-BUg"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myWebView0" destination="TGW-5A-4kq" id="rjf-nd-5Ts"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xk5-ZJ-xna" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2211" y="1963"/>
+        </scene>
+        <!--Google Images 1-->
+        <scene sceneID="rfL-XM-Lbr">
+            <objects>
+                <viewController title="Google Images 1" id="eHC-0H-SHn" customClass="GoogleImagesPictureGalleryViewController" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" id="kgG-nx-voX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </webView>
+                    <navigationItem key="navigationItem" title="Portraits" id="xjD-el-Lg2">
+                        <barButtonItem key="backBarButtonItem" title="Picture Gallery" id="kyB-Ds-CAZ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myGoogleImagesWebView" destination="kgG-nx-voX" id="vzR-AX-iJE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q94-gF-g3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1777" y="1963"/>
+        </scene>
+        <!--In his own voice-->
+        <scene sceneID="baS-KA-ppd">
+            <objects>
+                <viewController id="gfw-M8-hyh" customClass="YouTubeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OTT-VF-e2s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" id="L7E-RT-pNz" customClass="YTPlayerView">
+                                <rect key="frame" x="16" y="67" width="288" height="393"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="In his own voice" id="6LT-ir-emm">
+                        <barButtonItem key="backBarButtonItem" title="Vid" id="oNd-nA-sv5"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="playerView" destination="L7E-RT-pNz" id="79z-uI-Rye"/>
+                        <outlet property="view" destination="L7E-RT-pNz" id="PQn-Ef-fMc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q04-dB-rrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-955" y="433"/>
+        </scene>
+        <!--Interview Murrow-->
+        <scene sceneID="eKN-tF-73F">
+            <objects>
+                <viewController id="jIo-ER-LJy" userLabel="Interview Murrow" customClass="YouTube2ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l0L-cg-WFN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" id="5Fh-my-9ft" customClass="YTPlayerView">
+                                <rect key="frame" x="16" y="67" width="288" height="393"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Interview With Murrow" id="16B-UY-QIn" userLabel="Interview with Murrow">
+                        <barButtonItem key="backBarButtonItem" title="Vid" id="zAo-g5-cen"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="playerView" destination="5Fh-my-9ft" id="dzu-eK-hEr"/>
+                        <outlet property="view" destination="5Fh-my-9ft" id="RmT-99-WRa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kss-MX-Mbr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-955" y="-100"/>
+        </scene>
+        <!--Google Images 2-->
+        <scene sceneID="7lR-Ma-5Ya">
+            <objects>
+                <viewController title="Google Images 2" id="SzE-eE-CsE" customClass="GoogleImagesPictureGallery2ViewController" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" id="TuK-CD-yT7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </webView>
+                    <navigationItem key="navigationItem" title="Family" id="8eF-WS-mA9">
+                        <barButtonItem key="backBarButtonItem" title="Picture Gallery" id="tIK-zm-Edb"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myGoogleImagesWebView2" destination="TuK-CD-yT7" id="srf-pG-8S5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ssr-ce-1DR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1429" y="1963"/>
+        </scene>
+        <!--Google Images 3-->
+        <scene sceneID="JB9-hQ-jd2">
+            <objects>
+                <viewController title="Google Images 3" id="lYR-oY-fHy" customClass="GoogleImagesPictureGallery3ViewController" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" id="qer-Q4-Msq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </webView>
+                    <navigationItem key="navigationItem" title="Revolution" id="8k1-Wz-VBq" userLabel="Revolution">
+                        <barButtonItem key="backBarButtonItem" title="Picture Gallery" id="FrH-SS-fDu"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myGoogleImagesWebView3" destination="qer-Q4-Msq" id="ElM-tU-7Rg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E5o-oB-sWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1073" y="1969"/>
+        </scene>
+        <!--Google Images 4-->
+        <scene sceneID="MW5-pb-9r6">
+            <objects>
+                <viewController title="Google Images 4" id="Yo5-n1-a6E" customClass="GoogleImagesPictureGallery4ViewController" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" id="EDX-mZ-DQu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </webView>
+                    <navigationItem key="navigationItem" title="Missle Crisis" id="s10-BN-TCe" userLabel="MissleCrisis">
+                        <barButtonItem key="backBarButtonItem" title="Picture Gallery" id="uy1-Gr-cTl"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myGoogleImagesWebView4" destination="EDX-mZ-DQu" id="tQr-8c-qDH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nqx-Ta-EHr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-717" y="1963"/>
+        </scene>
+        <!--Google Images 5-->
+        <scene sceneID="Icf-0d-jke">
+            <objects>
+                <viewController title="Google Images 5" id="5M0-rr-gcb" customClass="GoogleImagesPictureGallery5ViewController" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" id="OUY-Fk-pn1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </webView>
+                    <navigationItem key="navigationItem" title="Recent" id="chk-UF-Oa4" userLabel="MissleCrisis">
+                        <barButtonItem key="backBarButtonItem" title="Picture Gallery" id="Kcf-hi-x8E"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myGoogleImagesWebView5" destination="OUY-Fk-pn1" id="PjQ-Pe-XwO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aap-9a-GR5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-334" y="1987"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Gud-O1-ATr">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="pa7-CZ-Kl3">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Gud-O1-ATr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="jjt-q1-UDT">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PPR-Bb-EM0" kind="relationship" relationship="rootViewController" id="DOb-gz-kRt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2bc-Ud-EYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-910" y="41"/>
+        </scene>
+        <!--Opening Screen View Controller - Fidel Castro-->
+        <scene sceneID="0oK-sB-Ex8">
+            <objects>
+                <tableViewController storyboardIdentifier="CellIdentifier" id="PPR-Bb-EM0" customClass="OpeningScreenViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Fidel Castro" id="bjz-du-x7j">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="ILG-Ol-0Jz"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="nd9-jD-ojC" kind="push" identifier="displayBiography" id="5o6-t0-h1Q"/>
+                        <segue destination="6XY-Gn-tcn" kind="push" identifier="playVideo" id="rkA-5b-8Rc"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdu-g1-kLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-488" y="41"/>
+        </scene>
+        <!--Picture Gallery View Controller-->
+        <scene sceneID="NDZ-Vl-9Zc">
+            <objects>
+                <viewController id="EdW-81-Twe" customClass="PictureGalleryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7aR-ga-90K">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="oqb-OX-ZpQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fLA-Xn-Je3">
+                                    <size key="itemSize" width="230" height="480"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="aoj-Lj-V2V" customClass="CustomCell">
+                                        <rect key="frame" x="45" y="0.0" width="230" height="480"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="230" height="480"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="k7t-VD-m0y">
+                                                    <rect key="frame" x="0.0" y="28" width="230" height="425"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.1603122927" green="1" blue="0.42028428639999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="myPictures" destination="k7t-VD-m0y" id="gtJ-0S-03k"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="L1q-wy-FgL"/>
+                    <connections>
+                        <outlet property="myViewController" destination="oqb-OX-ZpQ" id="6U9-T7-uG5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3DJ-YY-iMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="277"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="dnL-KE-muQ">
+            <objects>
+                <viewController id="6XY-Gn-tcn" customClass="VideoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V09-Wa-kNW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ift-oS-eKK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3l3-4W-PAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31" y="875"/>
+        </scene>
+        <!--Biography View Controller - Biography-->
+        <scene sceneID="TfN-Mq-42A">
+            <objects>
+                <viewController id="nd9-jD-ojC" customClass="BiographyViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EpH-fo-3ct">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="qzo-9V-alO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Biography of Fidel Castro:
+
+Early Years
+
+Fidel Castro Ruz was born on August 13, 1926 on his family prosperous sugar plantation near Birán in the eastern province of Oriente (today the Holguín Province). He was one of seven children of Ángel Castro, a wealthy Spanish-born landowner and his second wife Lina Ruz González. Ángel came from Galicia, Spain as an immigrant laborer but eventually became a landowner. He took up with Lina Ruz, the household maid from a poor family, when his first marriage to María Louisa Argota, who was from a wealthy family with ties to the Batista clan, was on the rocks. They had three children, including Fidel, before they got married in the Catholic Church. 
+
+He first attended the French Marists brothers’ La Salle boarding school in Santiago, and then the prestigious Jesuit-run Colegio Dolores for boys’ school. In 1941 he enrolled in the exclusive high school Colegio Belén in Havana. From the beginning he was spotted by the teachers as a talented boy with exceptional leadership abilities. Father Armando Llorente recalled him as “motivated, proud, and different from others… Fidel excelled in sports and was not interested in parties or socializing…” In high school he became familiar with writings of José Marti y Pérez, the legendary Cuban revolutionary leader of the late 1800s. He graduated with distinction in 1945.
+
+Political Activism
+
+Fidel enrolled in University of Havana to study law. From the beginning he got involved in rather violent student protest movement ruled by the culture of gangsterismo. He started reading a great deal of Marxist literature during these years and associated with Insurrectional Revolutionary Union (UIR) political organization that had long-standing ties to Cuban communist groups.
+
+In 1947 Castro joined an expedition led by writer Juan Bosch to overthrow the government of Dominican Republic led by dictator Rafael Trujillo, but the expedition never materialized.
+
+The following year he participated in one of the most controversial episodes of his life, the Bogotazo – a series of riots in Bogotá, Colombia, following the assassination of Liberal party leader Jorge E. Gaitán. He was caught in the violent riots that rocked Colombia after the assassination. He joined the mobs roaming the streets, distributing anti-U.S. propaganda and inciting the populace to revolt. Pursued by Colombian authorities, Cuban students sought asylum in the Cuban embassy and were later flown back to Havana. Castro resumed his law studies at the University of Havana.
+
+While still a student, Castro married Mirta Díaz-Balart, a philosophy student whose wealthy family had political ties to powerful Cuban military leader Fulgencio Batista. They had one son together but the marriage later dissolved. 
+
+While in college, Castro was exposed to different ideologies and it was nationalism, not socialism, which became the driving force of his early political activism. Castro’s hero was José Martí, not Lenin or Marx. As a student, Castro could have joined the Cuban Communist Party (as his brother Raúl had done), but he favored the nationalist ideas of Eduardo Chibas and the Ortodoxo party advocating economic independence, political liberty, social justice and an end to corruption for the country. Since Cuba was subject to the imperialism of both Spain and the United States, Castro believed in establishing a nation free of the colonialism and neocolonialism of the past years.
+
+Run for Congress
+
+Castro opened a private law office after graduating college in 1950. As a candidate from the Ortodoxo party, he was nominated for congress for the June 1952 elections. But the elections never materialized.  On March 10, 1952, General Fulgencio Batista, who had been a dominant figure in Cuban politics since the 1930s, seized power in a bloodless military coup.
+
+Castro reacted to the coup by submitting a petition to the Court of Constitutional Guarantees, in which he accused the dictator of having violated the Constitution of 1940. When his petition was rejected, he became convinced that violence seemed to be the only way of opposing the military coup.
+
+Attack on the Moncada Barracks 
+
+Hoping to arouse civil unrest, Castro personally planned and organized a group of 165 followers in an armed attack on Moncada military barracks in Santiago on July 26, 1953. The plan was not successful, the assault was repelled by government troops, with Castro’s rebel forces suffering heavy loses. Castro fled into the mountains but was captured days later. 
+
+On trial, Castro delivered one of his most famous speeches, “History Will Absolve Me”, in which he listed, with unique flair, the corruption and shortcomings of the Batista’s regime as well as his own solutions to the problem besetting Cuba. His speech embraced liberal nationalism, not socialism, and called for a democratic government, better education and health care, economic diversification, and an end to the overbearing influence of the United States in Cuba’s politics and economy. Not only were nationalists and socialists drawn into Castro’s camp but also members of the Cuban middle class resentful of Batista’s alliance with U.S. businesses and uneven development of Cuban economy.
+
+Sentenced to 15 years of incarceration to be served on the Isle of Pines prison, Castro was released two years later as part of a general amnesty. Along with his brother Raúl, Castro was exiled to for Mexico City in 1955.
+
+Return to Cuba
+
+In Mexico, Castro organized the 26th of July Movement, receiving military training from the Mexican government and financial support from president in exile Carlos Prio Socarras. Mexico City was also were he met Ernesto “Che” Guevara de la Serna, a young Argentine doctor and Marxist revolutionary who had recently arrived from Guatemala, having experienced, first-hand, the U.S. backed coup in there in 1954.
+
+On November 25, 1956, along with 82 revolutionaries, which included his brother Raúl and Che Guevara, Fidel boarded a worn-out, overcrowded leisure yacht named Granma.  The original route was designed to re-enact the path of José Martí at the beginning of Cuba’s War of Independence of 1895 but the vessel was spotted by a helicopter and the rebels were forced to land, on December 2, 1956, at Playa de los Colorados, 15 miles south of pre-arranged landing spot.
+
+On their way towards the Sierra Maestra Mountain, the revolutionaries were betrayed by their guide and ambushed by Batista’s troops.  Most were killed and only 12 made it to the mountain jungles. At this point Castro declared, “We will win this war, we’re just beginning to fight”.
+
+The Ouster of Batista
+
+For the next two years, utilizing Maoist-influenced foco military strategy, Castro’s troops, that eventually grew to be 1000, fought Batista’s regime in rural areas by running hit-and-run guerilla operations against isolated military outpost. In the meantime, in the cities, the growing dissatisfactions with the government gave rise to urban unrest including an unsuccessful student-led attack on the presidential palace during which Batista was almost killed. Beginning in early 1958, the rebel movement gained a series of victories against Batista’s forces with Castro emerging as the undisputed opposition leader. This in turn resulted in increased brutal tactics employed by the government troops.
+
+Same year, the Eisenhower administration stops military shipments to Cuba, accusing it of using the military aid to repress internal opposition. With growing dissatisfaction among the middle-class in the cities, and the ever-increasing defections from the military, Batista finally accepted his defeat and fled the country to the Dominican Republic in December 1958. Next day, Castor and his “26th of July” movement marched into Havana. 
+
+
+
+
+Assumption of Power
+
+At the beginning a provincial government was composed of a coalition of forces who had opposed Batista, but Castro’s “26th of July” movement was the leading group within the coalition. 
+
+In the beginning days of the new provincial government there were many arrests and executions of former members of the Batista’s regime. Elections were to be held within 18 months. On February 15, Fidel Castro became the prime minister with his brother, Raúl, assuming the command of the armed forces. 
+
+A powerful and charismatic leader, Castro started exerting an almost mystical hold over Cubans. He lectured the people on morality, public virtue and emphasized his commitment to democracy, social reform with the promise for a nationalistic government that would respect private property. He started gaining international attention too with his defiant stand against the United States. 
+
+The provincial government started a series of reforms. It passed an agrarian reform law, substantially reduced residential rents and confiscated inherited property. It also nationalized industrial enterprises, specially sugar, most of them owned by U.S. companies. These policies were not popular with the middle-class Cubans many of which left and went into exile. 
+
+Break with the United States
+
+Castro suspected United States of harboring aggressive designs of derailing the revolution. In February 1960, the deputy premier of the Soviet Union, Anastas Mikoyan, visited Cuba and signed diplomatic and trade agreements with Castro. Cuba agreed to buy Soviet oil in exchange for sugar. In June, Cuba confiscated American oil refineries since, under pressure from the Eisenhower administration, the refiners refused to process oil from the Soviet Union.  The U.S. responded by cutting the import quota of Cuban sugar. Castro in turn nationalized all American owned sugar mills and expropriated all American investments in the country.
+
+In a trip to the United States in 1959, organized by American Society of Newspaper Editors, Castro was snubbed by Dwight Eisenhower for a meeting. Instead he met with Vice President Richard Nixon in what turned out to be a cold and tense meeting.  In September 1960 Castro visited the United States again this time for the opening session of the United Nations General Assembly in New York. There he met and embraced Nikita Khrushchev. A month later, the United States imposed an economic embargo on Cuba and in January of 1961, the Eisenhower administration broke relations with Cuba.
+
+
+
+
+The Bay of Pigs Fiasco
+
+Encouraged by the coup in Guatemala orchestrated by the CIA, the Eisenhower administration, in 1961, gave the final approval for a secret plan to topple the Castro regime by an invasion of the island by anti-Castro exiles in the United States. The administration left office before it could carry out the plan, and the task fell on the incoming administration of John F. Kennedy. 
+
+The operation was both ill conceived and poorly planned and was a total failure for the United States. It helped Castro consolidate his power in the country.  He was hailed as one of the few leaders capable of standing up to the giant northern bully. On December 2, 1961, Castro finally declared himself a Marxist and fully switched to the Soviet camp given that he had few alternatives. 
+
+The Cuban Missile Crisis
+
+In October 1962, U.S. intelligence detected Soviet nuclear missiles in Cuba. President Kennedy demanded that the Soviets remove the missiles and Soviet premier Khrushchev countered by demanding the removal of U.S. missiles from Turkey. For days it appeared that the United States and the Soviet Union were header toward war.  While the world anxiously waited, Premier Khrushchev gave an eleventh-hour order to turn back a Soviet ship allegedly carrying nuclear missiles and the recall the Soviet nuclear missiles from Cuba. In turn the U.S. agreed not to invade Cuba and dismantled its missiles in Turkey and Italy that were aimed at the Soviet Union.
+
+According to documents released years later, Castro was willing to call Washington’s bluff. Later, he was privately furious and felt humiliated at Khrushchev’s decision to come to terms with the Americans and for not being included in U.S.–Soviet negotiations.
+
+Fate Sealed
+
+The missile crisis sealed Cuba’s fate: the United States would work to undermine Cuba at every turn, as well as try to assassinate Castro himself.  From the early 1960s to the early 2000s, Castro led the country, with varied success, on the path of Soviet-style socialism. He merged all groups that had fought against Batista into the Integrated Revolutionary Organization, later changed to United Party of the Socialist Revolution and finally transformed into the Communist Party of Cuba.
+
+All economic enterprises were nationalized, no matter how small, in an effort to centralize the economy and the distribution of resources. Fearful of another U.S.-backed coup, all political activities, the press and education were closely monitored. Confiscation of private property brought virtually all industrial and businesses under government control. 
+
+Castro remained the sole source of power, and decision-making became highly centralized and hierarchical. He ruled with a small circle of trusted advisers (members of the July 26 Movement and the military) in a government with no formal administrative or political structure during the period of 1959 to 1970. 
+
+Domestic Policy
+
+Castro concentrated on putting an end to human, social and economic underdevelopment for Cuba. He wanted to spare Cuba from extreme poverty that existed in other Latin American countries. He eradicated illiteracy, built clinics and hospitals throughout the country that resulted in higher life expectancy and lower infant mortality rate, in some cases better than many developed countries. Through rural reforms, peasants were given land while urban reforms reduced rents and banned the ownership of more than one dwelling. He helped train many doctors and teachers believing them to be as important as soldiers. 
+
+The state was a tightly controlled, one-party system, with power bureaucracy ran by Castor’s comrades with him as the supreme leader.  Only communist and government media, like the newspaper Granma, were permitted and all opposition was repressed. 
+
+Under Castro, the regime has made great strides towards higher standard of living for the population. It has been able to make great strides in living condition, education, life expectancy, housing and health services.  Economic prosperity, however has evaded the country. Economy has suffered from centralized planning and poor management and during Soviet times, from too much reliance on subsidies and aid from the Soviets. 
+
+The fall of the Soviet Union caused extreme hardship for Cuba. Faced with shortage of fuel and basic material Castro was forced to soften some of his socialistic stands and move more towards a market-oriented economy. Subsidies to inefficient state enterprises were reduced. Initiatives were put in place to increase tourism. Banking laws were changed to allow foreign investment. Having been deprived of sugar contracts with the Soviet Union and being forced to sell its sugar on world’s market, Cuba was forced to close half of its the state-owned sugar mills eliminating a great deal of jobs.
+
+Foreign Policy
+
+Cuba’s global foreign policy, evolved during the 1960’s and called “proletarian internationalism”, centered on the idea that the survival of the revolution and socialism in Cuba was only possible by exporting Cuba’s revolutionary model to other Latin America and Third World countries. Partly to divert the attention and hostility of the United States away from Cuba and also to help create favorable conditions abroad, Castro’s regime increased its support of many guerrilla movements in Latin America.  But this policy ran counter to interests of both the U.S. and the Soviet Union. Eventually these efforts fizzled out.
+
+For the next three decade Cuba aided many third world nations in Africa, the Middle East, the Caribbean, and Latin America, militarily, technically and in education. Some of the countries helped were Algeria, Angola, Ethiopia, Nicaragua, El Salvador and Guatemala. 
+
+Retirement
+
+While recovering from a acute intestine surgery all of Fidel’s duties were transferred to his brother Raúl on July 31, 2006. This move was initially thought to be temporary. But Fidel was never able to recover fully and finally in February of 2008 he resigned from all remaining positions of responsibility. 
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Biography" id="r1t-f5-iRt">
+                        <barButtonItem key="backBarButtonItem" title="Castro" id="oPd-qW-4LL"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmb-Kk-UDw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18" y="-310"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
